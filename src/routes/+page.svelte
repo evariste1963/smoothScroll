@@ -9,16 +9,18 @@
     sineInOut,
     linear,
   } from "svelte/easing";
+
+  
 </script>
 
 <nav>
-  <a href="/" use:scrollTo={{ ref: "home", duration: 1000, easing: sineInOut }}
+  <a href="/" use:scrollTo={{ ref: 'home', duration: 1000, easing: sineInOut }}
     >Home</a
   >
-  <a href="/" use:scrollTo={{ ref: "About", duration: 1500, easing: sineInOut }}
+  <a href="/" use:scrollTo={{ ref: 'about', duration: 1500, easing: sineInOut }}
     >About</a
   >
-  <a href="/" use:scrollTo={{ ref: "blog", duration: 2000, easing: sineInOut }}
+  <a href="/" use:scrollTo={{ ref: 'blog', duration: 2000, easing: sineInOut }}
     >Blog</a
   >
 </nav>
