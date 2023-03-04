@@ -10,31 +10,32 @@
     linear,
   } from "svelte/easing";
 
+  let scrollArr = ['home', 'about', 'blog']
   
 </script>
 
 <nav>
-  <a href="/" use:scrollTo={{ ref: 'home', duration: 1000, easing: sineInOut }}
-    >Home</a
+  <a href="/" use:scrollTo={{ ref: scrollArr[0], duration: 1000, easing: sineInOut }}
+    >{scrollArr[0]}</a
   >
-  <a href="/" use:scrollTo={{ ref: 'about', duration: 1500, easing: sineInOut }}
-    >About</a
+  <a href="/" use:scrollTo={{ ref: scrollArr[1], duration: 1500, easing: sineInOut }}
+    >{scrollArr[1]}</a
   >
-  <a href="/" use:scrollTo={{ ref: 'blog', duration: 2000, easing: sineInOut }}
-    >Blog</a
+  <a href="/" use:scrollTo={{ ref: scrollArr[2], duration: 2000, easing: sineInOut }}
+    >{scrollArr[2]}</a
   >
 </nav>
 <section class="null" />
-<section class="home" use:scrollRef={"home"}>
-  <div>this is the home section</div>
+<section class={scrollArr[0]} use:scrollRef={scrollArr[0]}>
+  <div>this is the {scrollArr[0]} section</div>
   <button on:click={() => scrollTop()}>Go to top</button>
 </section>
-<section class="about" use:scrollRef={"about"}>
-  <div>this is the about section</div>
+<section class={scrollArr[1]} use:scrollRef={scrollArr[1]}>
+  <div>this is the {scrollArr[1]} section</div>
   <button on:click={() => scrollTop()}>Go to top</button>
 </section>
-<section class="blog" use:scrollRef={"blog"}>
-  <div>this is the blog section</div>
+<section class={scrollArr[2]} use:scrollRef={scrollArr[2]}>
+  <div>this is the {scrollArr[2]} section</div>
   <button on:click={() => scrollTop()}>Go to top</button>
 </section>
 
