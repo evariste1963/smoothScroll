@@ -25,24 +25,26 @@
     >{scrollArr[2]}</a
   >
 </nav>
-<section class="null" />
-<section class={scrollArr[0]} use:scrollRef={scrollArr[0]}>
+<div class="open" />
+<div>
+<div class={scrollArr[0]} use:scrollRef={scrollArr[0]}>
   <div>this is the {scrollArr[0]} section</div>
   <button on:click={() => scrollTop()}>Go to top</button>
-</section>
-<section class={scrollArr[1]} use:scrollRef={scrollArr[1]}>
+</div>
+</div>
+<div class={scrollArr[1]} use:scrollRef={scrollArr[1]}>
   <div>this is the {scrollArr[1]} section</div>
   <button on:click={() => scrollTop()}>Go to top</button>
-</section>
-<section class={scrollArr[2]} use:scrollRef={scrollArr[2]}>
+</div>
+<div class={scrollArr[2]} use:scrollRef={scrollArr[2]}>
   <div>this is the {scrollArr[2]} section</div>
   <button on:click={() => scrollTop()}>Go to top</button>
-</section>
+</div>
 
 <button on:click={() => scrollTop()}>Go to top</button>
 
 <style>
-  .null,
+  .open,
   .home,
   .about,
   .blog {
